@@ -19,14 +19,7 @@ import junit.framework.Assert;
 public class TestScripts extends TestBaseClass{
 	TestBaseClass testBaseClass;
 	LoginPage loginPage;
-	FirstPage firstpage;
-	
-	/*//There is another way that we can declare the Username and Password;-----> Can declare in the class
-			@FindBy(id = "ap_email") WebElement username;
-			@FindBy(id = "ap_password") WebElement password;
-			@CacheLookup
-			@FindBy(How = How.ID, using="ap_email") WebElement username;*/
-			
+	FirstPage firstpage;	
 	
 	@BeforeTest
 	public void setup(){

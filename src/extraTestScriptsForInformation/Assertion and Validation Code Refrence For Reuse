@@ -1,0 +1,232 @@
+
+########## Hard Assertion---------> It will use for validating automation test scripts ##################
+	
+	/*public class HardAssertion {
+		 
+	    String className = "HardAssertion";
+	 
+	    @Test
+	    public void test_UsingHardAssertion() {
+	        Assert.assertTrue(true == true);
+	        Assert.assertEquals("HardAssertion", "HardAssertion");
+	        Assert.assertEquals(className, "HardAssertion");
+	        System.out.println("Successfully passed!");
+	    }*/
+	
+######### Soft Assertion---------> It will use for validating automation test scripts  ##################
+	
+	/*public class SoftAssertion {
+		 
+	    SoftAssert softAssert = new SoftAssert();
+	    String className = "SoftAssertion";
+	 
+	    @Test
+	    public void test_UsingSoftAssertion() {
+	        softAssert.assertTrue(true == true);
+	        softAssert.assertEquals("SoftAssert", "SoftAssertion");
+	        softAssert.assertEquals(className, "SoftAssertion");
+	        System.out.println("Last statement gets executed!");
+	        softAssert.assertAll();
+	    }*/
+	
+########## Scripts For Different kind of assertion ##################
+	
+		/*// Test-0. (disabled)
+		@Test(enabled = false)
+		public void testPageObject() throws Exception {
+	 
+			homePage = PageFactory.initElements(driver, HomePage.class);
+	 
+			driver.get(baseUrl);
+	 
+			chapterSecond = homePage.clickChapterSecond();
+			chapterSecond.clickbut2();
+			chapterSecond.clickRandom();
+			String data = chapterSecond.getTest();
+			homePage = chapterSecond.clickIndex();
+	 
+			chapterFirstPage = homePage.clickChapterFirst();
+			chapterFirstPage.clickSecondAjaxButton();
+			chapterFirstPage.clickSecondAjaxButton1(data);
+			chapterFirstPage.selectDropDown("Selenium Core");
+			chapterFirstPage.verifyButton();
+		}
+	 
+		// Test-1.
+		@Test
+		public void testAssertSuccess() throws Exception {
+	 
+			homePage = PageFactory.initElements(driver, HomePage.class);
+	 
+			driver.get(baseUrl);
+			Thread.sleep(1000); // Intentional pause.
+	 
+			chapterFirstPage = homePage.clickChapterFirst();
+			Thread.sleep(500); // Intentional pause.
+	 
+			chapterFirstPage.selectDropDown("Selenium Core");
+			Thread.sleep(1000); // Intentional pause.
+	 
+			Assert.assertEquals("Selenium Core", chapterFirstPage.getDropDownText());
+		}
+	 
+		// Test-2.
+		@Test
+		public void testAssertTrue() throws Exception {
+	 
+			homePage = PageFactory.initElements(driver, HomePage.class);
+	 
+			driver.get(baseUrl);
+			Thread.sleep(1000); // Intentional pause.
+	 
+			chapterFirstPage = homePage.clickChapterFirst();
+			Thread.sleep(500); // Intentional pause.
+	 
+			chapterFirstPage.selectDropDown("Selenium Core");
+			Thread.sleep(1000); // Intentional pause.
+	 
+			Assert.assertTrue(chapterFirstPage.getDropDownText().equalsIgnoreCase("Selenium Core"));
+		}
+	 
+		// Test-3.
+		@Test
+		public void testAssertFailure() throws Exception {
+	 
+			homePage = PageFactory.initElements(driver, HomePage.class);
+	 
+			driver.get(baseUrl);
+			Thread.sleep(1000); // Intentional pause.
+	 
+			chapterFirstPage = homePage.clickChapterFirst();
+			Thread.sleep(500); // Intentional pause.
+	 
+			chapterFirstPage.selectDropDown("Selenium Core");
+			Thread.sleep(1000); // Intentional pause.
+	 
+			Assert.assertEquals("Selenium RC", chapterFirstPage.getDropDownText());
+		}
+	 
+		// Test-4.
+		@Test
+		public void testAssertFailureWithMessage() throws Exception {
+	 
+			homePage = PageFactory.initElements(driver, HomePage.class);
+	 
+			driver.get(baseUrl);
+			Thread.sleep(1000); // Intentional pause.
+	 
+			chapterFirstPage = homePage.clickChapterFirst();
+			Thread.sleep(500); // Intentional pause.
+	 
+			chapterFirstPage.selectDropDown("Selenium Core");
+			Thread.sleep(1000); // Intentional pause.
+	 
+			Assert.assertEquals("Selenium RC", chapterFirstPage.getDropDownText(), "Invalid Component Selected!!!\n\t");
+		}*/
+	
+############ Verify if Text is present or not ##################
+	
+			/*if(driver.getPageSource().contains("Text - Testing with Arif"))
+			{
+			System.out.println("Text is Present");
+			}
+			else
+			{
+			System.out.println("Text is not Present");
+			}
+			
+			OR
+
+			try {
+				assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*verify text is present[\\s\\S]*$"));
+				} catch (Error e) {
+				verificationErrors.append(e.toString());
+				}
+			
+			OR
+			
+			driver.findElement(By.xpath("//span[contains(.,'Transaction was added successfully')]"));
+			System.out.println("Transaction successful");
+			
+			OR
+			
+			try {
+			assertEquals("VerifyText in Element", driver.findElement(By.cssSelector("div.bbMargin")).getText());
+			} catch (Error e) {
+			verificationErrors.append(e.toString());
+			}*/
+	
+############ Assert if Text is present or not	##################
+	
+	/*assertTrue(driver.getPageSource().contains("1,500.00"));
+	System.out.println("1500.00 found in page source");
+	
+	OR
+	
+	assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*assert text is present[\\s\\S]*$"));
+	
+	OR
+	
+	assertEquals("1,500.00", driver.findElement(By.cssSelector("div.eoh.")).getText();
+	System.out.println("1500 found written in div");
+	
+	OR
+	
+	assertTrue(findElement(By.id("myElement")).getText().equals("foo");*/
+	
+########### Verify Element Present
+	
+
+	/*!driver.findElements(By.id("xyz")).isEmpty();
+	
+	OR
+	
+	if(isElementPresent(By.linkText("Submit")))
+	{
+	System.out.println("SUBMIT Link/Button found");
+	}
+	else
+	{
+	System.out.println("SUBMIT Link/Button not found");
+	}
+	
+	OR
+	
+	try {
+	assertTrue(isElementPresent(By.cssSelector("div.bbMargin")));
+	} catch (Error e) {
+	verificationErrors.append(e.toString());
+	}*/
+	
+########## Assert Element is present or not ##################
+	
+	
+	/*assertTrue(isElementPresent(By.cssSelector("div.bbMargin")));
+	
+	OR
+	
+	Assert.assertEquals(0, wd.findElements(By.locator("locator")).size());*/
+	
+//######### For Page Title Assert Validation
+	
+
+	/*public void pageTitle() {
+	   driver.get("http://referencewebapp.qaautomation.net/");
+	   String pageTitle = driver.getTitle();
+	   assertEquals("Current page title", "Reference Web App - QA Automation", pageTitle);
+	
+	}
+*/
+	
+############ Validation Against Elements ##################
+	
+	/*driver.get("http://referencewebapp.qaautomation.net/");
+	WebElement header = driver.findElement(By.id("header"));
+	assertEquals("Header text", "Reference Web App", header.getText());*/
+
+	/*driver.get("http://referencewebapp.qaautomation.net/");
+	WebElement header = driver.findElement(
+	By.xpath("//div[@id=\"header\" and normalize-space(.)=\"Reference Web App\"]"));
+	assertNotNull("Header text", header);*/
+	
+	
