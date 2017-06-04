@@ -37,7 +37,7 @@ public class FirstPage extends TestBaseClass {
 		String Text = driver.findElement(By.xpath(".//*[@id='nav-link-accountList']/span[1]")).getText();
         System.out.println(Text);
         Assert.assertEquals("Hello, Kuldeep", Text);
-        System.out.println("Successfully Sign In");
+        System.out.println("Successfully SignIn");
 		
 	}
 
