@@ -1,5 +1,5 @@
 # AmazonWebTesting
-## Web Application Testing Of Amazo
+# Web Application Testing Of Amazo
 
 
 ## This is the Page Object Model Framewrok for the Selenium Webdriver
