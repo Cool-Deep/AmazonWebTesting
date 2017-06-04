@@ -4,8 +4,7 @@
 
 --This is the Page Object Model Framewrok for the Selenium Webdriver
 --Tool used for writing Test Scripts ( Eclipse Neon ), Language Used ( Java ) 
---Extension used ----> TestNG and Maven. Cucumber will update soon on this project 
-
+--Extension used ----> TestNG and Maven. Cucumber will update soon on this project
 
 
 --For Code please follow this path
