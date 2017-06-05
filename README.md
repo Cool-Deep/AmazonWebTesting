@@ -1,6 +1,7 @@
 # AmazonWebTesting
+Demo Project Started working on 6/1/2017. Until now sign in and User Validation is done
 
--->This is the Page Object Model Framewrok for the Selenium Webdriver
+-->Used Page Object Model Framewrok for this Project with the help of  Selenium Webdriver
 
 -->Tool used for writing Test Scripts ( Eclipse Neon ), Language Used ( Java ) 
 
